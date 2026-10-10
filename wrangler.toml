@@ -1,0 +1,12 @@
+name = "raqeem-helpdesk"
+main = "src/index.ts"
+compatibility_date = "2024-06-01"
+
+[vars]
+APP_NAME = "Raqeem HelpDesk"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "raqeem-helpdesk-db"
+database_id = "f1b98d90-38d9-4e95-9352-54fc0fbff731"
+migrations_dir = "migrations"

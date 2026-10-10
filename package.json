@@ -1,0 +1,21 @@
+{
+  "name": "raqeem-helpdesk",
+  "version": "1.0.0",
+  "description": "Raqeem HelpDesk — نظام الدعم الفني (Help Desk ticketing SaaS on Cloudflare Workers + D1)",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "db:migrate:local": "wrangler d1 migrations apply raqeem-helpdesk-db --local",
+    "db:seed:local": "wrangler d1 execute raqeem-helpdesk-db --local --file=./seed/seed.sql",
+    "db:migrate:remote": "wrangler d1 migrations apply raqeem-helpdesk-db --remote",
+    "db:seed:remote": "wrangler d1 execute raqeem-helpdesk-db --remote --file=./seed/seed.sql",
+    "test": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240605.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^3.114.17"
+  }
+}
